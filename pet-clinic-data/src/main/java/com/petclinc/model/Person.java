@@ -2,6 +2,7 @@ package com.petclinc.model;
 
 public class Person {
 
+    private Long id;
     private String firstName;
     private String lastName;
 
