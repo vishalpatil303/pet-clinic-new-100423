@@ -1,8 +1,7 @@
 package com.petclinc.model;
 
-public class Person {
+public class Person  extends  BaseEntity{
 
-    private Long id;
     private String firstName;
     private String lastName;
 
