@@ -2,10 +2,11 @@ package com.petclinc.services.map;
 
 import com.petclinc.model.Vet;
 import com.petclinc.services.CrudService;
+import com.petclinc.services.VetService;
 
 import java.util.Set;
 
-public class VetMapService extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+public class VetMapService extends AbstractMapService<Vet,Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
@@ -18,7 +19,7 @@ public class VetMapService extends AbstractMapService<Vet,Long> implements CrudS
     }
 
     @Override
-    public Vet Save(Vet vet) {
+    public Vet save(Vet vet) {
         return super.save((vet.getId()),vet);
     }
 

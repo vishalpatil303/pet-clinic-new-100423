@@ -7,7 +7,7 @@ public interface CrudService<T,Long> {
 
     T findById(Long id);
 
-    T Save (T t);
+    T save (T t);
 
     void delete(T t);
 
