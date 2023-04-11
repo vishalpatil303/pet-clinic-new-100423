@@ -12,6 +12,8 @@ import com.petclinc.services.map.VetMapService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.Set;
+
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -19,16 +21,21 @@ public class DataLoader implements CommandLineRunner {
     private final PetService petService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerMapService();
-        petService = new PetMapService();
-        vetService = new VetMapService();
+    public DataLoader(OwnerService ownerService, PetService petService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.petService = petService;
+        this.vetService = vetService;
     }
 
     @Override
     public void run(String... args) throws Exception {
         loadData();
         System.out.println("Data is loaded in system");
+        Set<Owner> owners = ownerService.findAll();
+
+        for (Owner owner: owners) {
+            System.out.println(owner.toString());
+        }
     }
 
     public void loadData(){
@@ -57,5 +64,7 @@ public class DataLoader implements CommandLineRunner {
         shiva.setLastName("JAJAL");
 
         vetService.save(shiva);
+
+
     }
 }

@@ -3,15 +3,18 @@ package com.petclinc.services.map;
 import com.petclinc.model.Owner;
 import com.petclinc.services.CrudService;
 import com.petclinc.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class OwnerMapService extends  AbstractMapService<Owner,Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
     }
+
+
 
     @Override
     public Owner findById(Long id) {

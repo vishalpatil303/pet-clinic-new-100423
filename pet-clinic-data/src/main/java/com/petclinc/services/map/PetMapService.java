@@ -3,9 +3,10 @@ package com.petclinc.services.map;
 import com.petclinc.model.Pet;
 import com.petclinc.services.CrudService;
 import com.petclinc.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class PetMapService extends AbstractMapService<Pet,Long> implements PetService {
 
     @Override
