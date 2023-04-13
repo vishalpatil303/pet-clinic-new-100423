@@ -6,9 +6,6 @@ import com.petclinc.model.Vet;
 import com.petclinc.services.OwnerService;
 import com.petclinc.services.PetService;
 import com.petclinc.services.VetService;
-import com.petclinc.services.map.OwnerMapService;
-import com.petclinc.services.map.PetMapService;
-import com.petclinc.services.map.VetMapService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

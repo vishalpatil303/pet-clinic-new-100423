@@ -9,6 +9,7 @@
 
     <groupId>com.petclinc</groupId>
     <artifactId>pet-clinic-web</artifactId>
+    <packaging>jar</packaging>
 
     <name>pet-clinic-web</name>
     <url>http://maven.apache.org</url>
