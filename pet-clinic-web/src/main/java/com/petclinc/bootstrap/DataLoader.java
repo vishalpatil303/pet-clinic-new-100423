@@ -26,13 +26,14 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        loadData();
-        System.out.println("Data is loaded in system");
+       // loadData();
+        //System.out.println("Data is loaded in system");
         Set<Owner> owners = ownerService.findAll();
 
         for (Owner owner: owners) {
-            System.out.println(owner.toString());
+           // System.out.println(owner.toString());
         }
+
     }
 
     public void loadData(){
@@ -46,22 +47,29 @@ public class DataLoader implements CommandLineRunner {
         //Owner object
 
         Owner yogesh = new Owner();
-        yogesh.setId(1l);
+        //yogesh.setId(1l);
         yogesh.setFirstName("YOGESH");
         yogesh.setLastName("JAJAL");
 
         ownerService.save(yogesh);
 
+        Owner vishal = new Owner();
+        vishal.setLastName("Dwarkunde");
+        vishal.setFirstName("Vishal");
+        ownerService.save(vishal);
         //Vet Object
 
         Vet shiva = new Vet();
 
-        shiva.setId(1l);
+        //shiva.setId(1l);
         shiva.setFirstName("SHIVA");
         shiva.setLastName("JAJAL");
 
         vetService.save(shiva);
-
+        Vet shivam = new Vet();
+        shivam.setFirstName("Shivam");
+        shivam.setLastName("Dwarkunde");
+        vetService.save(shivam);
 
     }
 }
