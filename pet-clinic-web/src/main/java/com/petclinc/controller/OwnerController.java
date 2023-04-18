@@ -19,7 +19,7 @@ public class OwnerController {
         this.ownerService = ownerService;
     }
 
-    @GetMapping("/")
+    @GetMapping({"/",""})
     public String getOwner(Model model){
         Set<Owner> owners = ownerService.findAll();
         model.addAttribute("owners",owners);

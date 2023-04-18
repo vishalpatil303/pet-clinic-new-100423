@@ -26,7 +26,7 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-       // loadData();
+        loadData();
         //System.out.println("Data is loaded in system");
         Set<Owner> owners = ownerService.findAll();
 
